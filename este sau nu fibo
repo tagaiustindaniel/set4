@@ -1,0 +1,24 @@
+//este sau nu este fibo?
+#include <iostream>
+
+using namespace std;
+
+int n;
+int main()
+{
+    cout<<"n="; cin>>n;
+    if (n==0) {cout<<"DA";return 0;}
+    if (n==1) {cout<<"DA";return 0;}
+    int fibonacci=1;
+    int ultimul=1;
+    int penultimul=0;
+    while (n<fibonacci)
+    {
+        fibonacci=ultimul+penultimul;
+        penultimul=ultimul;
+        ultimul=fibonacci;
+    }
+    if (fibonacci==n) {cout<<"DA";}
+        else {cout<<"NU";}
+        return 0;
+}
