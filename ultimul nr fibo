@@ -1,0 +1,33 @@
+//ultimul nr fibo
+#include <iostream>
+
+using namespace std;
+
+int n;
+int main()
+{
+    cout<<"n="; cin>>n;
+    if (n==1) {cout<<"0"; return 0;}
+            if (n==2) {cout<<"1";return 0;}
+                else
+                {
+
+                    int cate=2;
+                    int ultimul=1;
+                    int penultimul=0;
+                    int fibonacci;
+                    while (cate<n)
+
+                    {
+                        fibonacci=ultimul+penultimul;
+                        penultimul=ultimul;
+                        ultimul=fibonacci;
+                        cate=cate+1;
+
+                    }
+                     cout<<" "<<fibonacci;
+                }
+
+
+     return 0;
+}
